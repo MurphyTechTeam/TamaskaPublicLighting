@@ -1,0 +1,20 @@
+{{ define "error_400.html" }}
+{{ template "header" . }}
+<body>
+    <!-- Layout wrapper -->
+    <div class="error text-center">
+      <img src="/assets/img/tamaska/logo.png" alt="Logo Tamaska" height="50">
+      <p>
+        <b>400</b> - Bad Request!
+      </p>
+      <p>
+        Tautan link sedang bermasalah. Mohon dicoba lagi setelah beberapa saat.
+      </p>
+      <button class="error-button">
+        <a href="/public-lighting/dashboard">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </a>
+      </button>
+    </div>
+{{ template "footer" . }}
+{{ end }}

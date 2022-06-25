@@ -1,0 +1,51 @@
+{{ define "navbar" }}
+<div class="top-bar menu flex-row">
+    <!-- Navbar -->
+    <div class="col-11 order-2 order-md-3 order-lg-2 mb-4">
+      <div class="row">
+        <div class="col-8">
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar"
+          >
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+              <!-- Search -->
+              <div class="navbar-nav align-items-center">
+                <div class="nav-item d-flex align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <input
+                    type="text"
+                    class="form-control border-0 shadow-none"
+                    placeholder="Cari..."
+                    aria-label="Cari..."
+                  />
+                </div>
+              </div>
+              <!-- /Search -->
+            </div>
+          </nav>
+        </div>
+        <!-- / Navbar -->
+        <div class="col-4">
+          <!-- Date Time -->
+          <div class="top-bar menu flex-row">
+            <!-- Date Time -->
+            <div class="navbar-nav align-items-center live-date-time">
+              <div class="nav-item d-flex align-items-center">
+                <span style="position: absolute; right:33px;margin-top: 30px;">{{ .timeNow }}</span>
+              </div>
+            </div>
+            <!-- Date Time -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Date Time -->
+</div>
+{{ end }}

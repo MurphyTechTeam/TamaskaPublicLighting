@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .title }}</title>
+    <style>
+        th, td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang Rizqi</h1>
+    <table border="1px">
+        <tr>
+          <th>No.</th>
+          <th>Id Application</th>
+          <th>Id Device</th>
+          <th>Nama Device</th>
+          <th>EUI Device</th>
+          <th>Alamat Device</th>
+          <th>ID Device Lora</th>
+          <th>Tanggal dibuat</th>
+          <th>Terakhir dimodifikasi</th>
+        </tr>
+        {{ range $i, $dev := .device }}
+        <tr>
+          <td>{{ $i }}</td>
+          <td>{{ $dev.IdApplication }}</td>
+          <td>{{ $dev.IdDevice }}</td>
+          <td>{{ $dev.Name }}</td>
+          {{ if $dev.Devicelbl }}
+          <td>{{ index $dev.Devicelbl 0 }}</td>
+          <td>{{ index $dev.Devicelbl 1 }}</td>
+          <td>{{ index $dev.Devicelbl 2 }}</td>
+          {{ else }}
+          <td>Cannot Use Lora</td>
+          <td>Cannot Use Lora</td>
+          <td>Cannot Use Lora</td>
+          {{ end }}
+          <td>{{ $dev.CreatedTime }}</td>
+          <td>{{ $dev.LastModTime }}</td>
+        </tr>
+        {{ end }}
+      </table>
+</body>
+</html>

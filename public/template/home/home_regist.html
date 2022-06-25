@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+
+<body>
+
+    <h2>Tamaska Public Lighting Register</h2>
+
+    <form id="formAuthentication" action="/register" method="POST">
+        <label for="namalabel">Nama</label><br>
+        <input type="text" id="nama" name="nama" placeholder="Masukan Nama Anda" required><br>
+        <label for="emaillabel">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="Masukan Email Anda" required><br>
+        <label for="passwordlabel">Password</label><br>
+        <input type="password" id="password" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"><br>
+        <label for="role">Role</label><br>
+        <!-- <select id="role" name="role">
+            <option value="1">Admin</option>
+            <option value="2">Pengelola Kawasan</option>
+            <option value="3">Engineer</option>
+            <option value="4">Tenant</option>
+        </select><br> -->
+        <input type="checkbox" id="role1" name="role1" value="1">
+        <label for="role1"> Admin</label><br>
+        <input type="checkbox" id="role2" name="role2" value="2">
+        <label for="role2"> Pengelola Kawasan</label><br>
+        <input type="checkbox" id="role3" name="role3" value="3">
+        <label for="role3"> Engineer</label><br>
+        <input type="checkbox" id="role4" name="role4" value="4">
+        <label for="role4"> Tenant</label><br>
+        <br><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <a href="/login">Login</a>
+
+</body>
+
+</html>
